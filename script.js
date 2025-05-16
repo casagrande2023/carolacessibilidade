@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    constDeAcessibilidade = document.getElementById('botao-acessibilidade')
+    const botaoDeAcessibilidade = document.getElementById('botao-acessibilidade')
     const opcoesDeAcessibilidade = document.getElementById('opcoes-acessibilidade')
 
     botaoDeAcessibilidade.addEventListener('click', function () {
@@ -8,11 +8,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     })
     
-//Código omitido
+    const botaoSelecionado = botaoDeAcessibilidade.getAttribute('aria-expanded') === 'true';
+        botaoDeAcessibilidade.setAttribute('aria-expanded', !botaoSelecionado)
 
-const botaoSelecionado = botaoDeAcessibilidade.getAttribute('aria-expanded') === 'true';
-
-//Código omitido
 
     const aumentaFonteBotao = document.getElementById('aumentar-fonte');
     const diminuiFonteBotao = document.getElementById('diminuir-fonte');
